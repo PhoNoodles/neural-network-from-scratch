@@ -14,9 +14,15 @@ def neuron(inputs, weights, bias):
 
 
 inputs = [2, 3, 4]
-weights = [0.5, -1]
+weights = [0.5, -1, 2]
 bias = 1
 
 output = neuron(inputs, weights, bias)
 
 print(output)
+
+# Demonstrate the validation separately.
+try:
+    neuron(inputs, [0.5, -1], bias)
+except ValueError as error:
+    print(error)
